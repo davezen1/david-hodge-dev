@@ -48,7 +48,7 @@ jobs:
           name: public
 
       - name: Unzip public artifact and check contents of public
-        run: unzip public.zip -d public && ls -R /home/runner/work/david-hodge-dev/david-hodge-dev && ls -R public
+        run: ls -R /home/runner/work/david-hodge-dev/david-hodge-dev && ls -R public
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
