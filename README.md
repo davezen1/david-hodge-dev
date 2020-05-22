@@ -4,3 +4,57 @@
 
 - Uses Hugo and Firebase to host blog
 - Uses GitHub Actions to automate build and deploy
+
+
+```
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.70.0'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+      
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: public
+          path: public
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: public
+
+      - name: Unzip public artifact and check contents of public
+        run: unzip public.zip -d public && ls -R /home/runner/work/david-hodge-dev/david-hodge-dev && ls -R public
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+```
