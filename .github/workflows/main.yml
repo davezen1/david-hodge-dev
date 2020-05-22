@@ -39,7 +39,7 @@ jobs:
           name: public
 
       - name: Check contents of public
-        run: ls -R public
+        run: ls -R /home/runner/work/david-hodge-dev/david-hodge-dev && ls -R public
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
