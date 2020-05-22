@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -47,8 +48,8 @@ jobs:
         with:
           name: public
 
-      - name: Unzip public artifact and check contents of public
-        run: ls -R /home/runner/work/david-hodge-dev/david-hodge-dev && ls -R public
+      - name: check contents of runner directory
+        run: ls -R /home/runner/work/david-hodge-dev/david-hodge-dev
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
