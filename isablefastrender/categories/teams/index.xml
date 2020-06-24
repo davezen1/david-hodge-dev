@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>teams - Category - David Hodge</title>
+        <link>http://localhost:1313/categories/teams/</link>
+        <description>teams - Category - David Hodge</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>david.hodge@lucidtechnics.com (David Hodge)</managingEditor>
+            <webMaster>david.hodge@lucidtechnics.com (David Hodge)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Jun 2020 18:09:44 -0400</lastBuildDate><atom:link href="http://localhost:1313/categories/teams/" rel="self" type="application/rss+xml" /><item>
+    <title>A Better Tomorrow</title>
+    <link>http://localhost:1313/a-better-tomorrow/</link>
+    <pubDate>Tue, 23 Jun 2020 18:09:44 -0400</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/a-better-tomorrow/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/spencer-watson-raz0rm8WJwg-unsplash.jpg" referrerpolicy="no-referrer">
+            </div>Unsplash Image Credit: Spencer Watson 
+A Better Tomorrow As an independent consultant, I lead technical teams and move the needle for modernization in enterprises. I keep coming back to the idea of what the project looks like for a new team member. What is the architecture? How are pull requests done? What technologies are we using? What tech stack do they want to move towards?
+When I join a new team, I ask the most important question: How do we deliver software to our users?]]></description>
+</item></channel>
+</rss>
